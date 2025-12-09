@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facundo Padilla | Bitget redirect</title>
+</head>
+<body>
+    <h1>Bitget redirect | thx u github pages!!! <333</h1>
+    <p>how to use: add ?referCode=yourUsername to the URL</p>
+    <script>
+        // This part isn't scalable
+        const bitgetUsers = {
+            "facundopadilla": "56G0Z15V"
+        }
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        if (urlParams.has('referCode')) {
+            // Get a specific parameter's value
+            const referCodeQueryParam = urlParams.get('referCode'); 
+            console.log(`Refer code as query param: ${referCodeQueryParam}`);
+        
+            const referCode = bitgetUsers[referCodeQueryParam];
+            console.log(`Refer code from object: ${referCode}`);
+
+            window.location.href = `https://share.bitget.com/u/${referCode}`
+        }
+    </script>
+</body>
+</html>
