@@ -1,12 +1,214 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facundo Padilla</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Facundo Padilla — Portfolio</title>
+  <meta name="description" content="Portfolio personal de Facundo Padilla: experiencia, habilidades y contacto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/images/people/facundo-padilla.jpg" type="image/jpeg" />
 </head>
 <body>
-    <h1>There is nothing here yet, I created this page only for redirect QR's links using Javascript and Github Pages for free, thank you very much Github!!! <3</h1>
-    <h2>With love: Facundo</h2>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="cursor-halo" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="container nav-inner">
+        <a class="brand" href="#hero" aria-label="Inicio">facundopadilla.com</a>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" data-i18n="nav.home">Inicio</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="nav-about-menu" data-i18n="nav.about">Sobre mí</button>
+            <ul class="nav-dropdown-menu" id="nav-about-menu">
+              <li><a href="#about" data-i18n="nav.aboutMenu.who">¿Quién soy?</a></li>
+              <li><a href="#education" data-i18n="nav.aboutMenu.education">Educación</a></li>
+              <li><a href="#skills" data-i18n="nav.aboutMenu.skills">Habilidades</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="nav-experience-menu" data-i18n="nav.experience">Experiencia</button>
+            <ul class="nav-dropdown-menu" id="nav-experience-menu">
+              <li><a href="#experience" data-i18n="nav.experienceMenu.work">Laboral</a></li>
+              <li><a href="#achievements" data-i18n="nav.experienceMenu.achievements">Trayectoria</a></li>
+              <li><a href="#communities" data-i18n="nav.experienceMenu.communities">Comunidades</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <button class="lang-toggle" type="button" aria-label="Cambiar idioma" data-lang="es">EN</button>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="hero" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Portfolio personal</p>
+          <h1>Facundo Padilla</h1>
+          <p class="subtitle" data-i18n="hero.subtitle">Desarrollador de software con +6 años de experiencia, y referente en la comunidad de SaltaDev</p>
+          <div class="skill-marquee" aria-label="Habilidades técnicas">
+            <div class="marquee-track" id="hero-marquee"></div>
+          </div>
+          <div class="cta-group">
+            <a class="btn primary" href="#experience" data-i18n="hero.ctaPrimary">Ver experiencia</a>
+            <a class="btn ghost" href="#contact" data-i18n="hero.ctaSecondary">Contactar</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="avatar-frame">
+            <img class="avatar-image" src="assets/images/people/facundo-padilla.jpg" alt="Facundo Padilla" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="about.title">🤓 Sobre mí</h2>
+          <p data-i18n="about.subtitle">Un vistazo a mi perfil, intereses y enfoque profesional.</p>
+        </div>
+        <div class="about-grid">
+          <article class="card about-card">
+            <p data-i18n-html="about.body">
+              Hola, soy Facundo. Me dedico al desarrollo de software y actualmente trabajo como <strong>Software Engineer</strong> en Santander Tecnología, donde participo en iniciativas de desarrollo, DevOps, quality assurance y automatización de procesos con inteligencia artificial.<br /><br />
+              Además, soy fundador de <strong>SaltaDev</strong>, una comunidad de tecnología del norte argentino. Organizo y promuevo eventos, coworkings y charlas para conectar personas, compartir conocimiento y acercar oportunidades tech a la región.<br /><br />
+              Fuera del trabajo, disfruto viajar, la música, los shows y conocer gente con intereses similares.
+            </p>
+          </article>
+          <aside class="about-details">
+            <div class="card">
+              <h3 data-i18n="about.interestTitle">Intereses 🔎</h3>
+              <p data-i18n="about.interestText">Inteligencia artificial, automatización de procesos y arquitectura de software.</p>
+            </div>
+            <div class="card">
+              <h3 data-i18n="about.locationTitle">Ubicación 📍</h3>
+              <p data-i18n="about.locationText">Salta, Argentina.</p>
+            </div>
+            <div class="card">
+              <h3 data-i18n="about.focusTitle">Enfoque actual 🎯</h3>
+              <p data-i18n="about.focusText">Inspiración diaria, curiosidad constante y comunidad.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="experience.title">💼 Experiencia laboral</h2>
+          <p data-i18n="experience.subtitle">Resultados medibles, equipos colaborativos y foco en calidad.</p>
+        </div>
+        <div class="timeline" id="experience-timeline" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="education.title">🎓 Educación</h2>
+          <p data-i18n="education.subtitle">Formación continua, certificaciones y base técnica sólida.</p>
+        </div>
+        <div class="accordion" id="education-accordion" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="achievements.title">🚀 Trayectoria</h2>
+          <p data-i18n="achievements.subtitle">Charlas, eventos, competencias y reconocimientos relevantes.</p>
+        </div>
+        <div class="filter-chips" role="tablist" aria-label="Filtro de actividades">
+          <button class="chip-filter active" type="button" data-filter="all" aria-selected="true" data-i18n="achievements.filters.all">Todos</button>
+          <button class="chip-filter" type="button" data-filter="recognitions" aria-selected="false" data-i18n="achievements.filters.recognitions">Reconocimientos</button>
+          <button class="chip-filter" type="button" data-filter="speaker" aria-selected="false" data-i18n="achievements.filters.speaker">Speaker</button>
+          <button class="chip-filter" type="button" data-filter="competitions" aria-selected="false" data-i18n="achievements.filters.competitions">Competencias</button>
+          <button class="chip-filter" type="button" data-filter="events" aria-selected="false" data-i18n="achievements.filters.events">Eventos</button>
+        </div>
+        <div class="cards-grid achievements-grid" id="achievements-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="communities" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="communities.title">🤝 Comunidades</h2>
+          <p data-i18n="communities.subtitle">Construyo comunidad y oportunidades en tecnología.</p>
+        </div>
+        <div class="impact-block card">
+          <div>
+            <h3 data-i18n="communities.heroTitle">Construyo comunidad y oportunidades en tecnología</h3>
+            <p data-i18n="communities.heroText">Espacios de aprendizaje, mentoría y colaboración con impacto local.</p>
+          </div>
+          <a class="btn primary" href="#contact" data-i18n="communities.cta">¿Te interesa colaborar? 🙌</a>
+        </div>
+        <div class="community-metrics" id="community-metrics" aria-live="polite"></div>
+        <div class="cards-grid communities-grid list-view" id="communities-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="skills.title">🔨 Habilidades</h2>
+          <p data-i18n="skills.subtitle">Stack técnico, prácticas de calidad y habilidades blandas.</p>
+        </div>
+        <div class="skills-panel">
+          <div class="tabs" role="tablist" aria-label="Filtro de habilidades">
+            <button class="tab active" role="tab" aria-selected="true" data-skill="all" data-i18n="skills.tabs.all">Todas</button>
+            <button class="tab" role="tab" aria-selected="false" data-skill="hard" data-i18n="skills.tabs.hard">Técnicas</button>
+            <button class="tab" role="tab" aria-selected="false" data-skill="soft" data-i18n="skills.tabs.soft">Blandas</button>
+          </div>
+          <div class="chips" id="skills-chips" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="contact.title">📬 Contacto y redes</h2>
+          <p data-i18n="contact.subtitle">¿Querés colaborar o conversar? Estoy a un mensaje.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="card contact-card">
+            <h3 data-i18n="contact.connectTitle">Redes sociales</h3>
+            <p data-i18n="contact.connectText">Puedes contactarme por cualquiera de los siguientes medios.</p>
+            <div class="contact-links" id="contact-links"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p data-i18n="footer.copy">© 2026 Facundo Padilla. Todos los derechos reservados.</p>
+      <a class="inline-link" href="#top" data-i18n="footer.backToTop">Volver arriba</a>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Volver arriba">
+    ↑
+  </button>
+
+  <div class="section-nav" aria-label="Navegación por secciones">
+    <button class="section-arrow" data-direction="up" aria-label="Sección anterior">↑</button>
+    <button class="section-arrow" data-direction="down" aria-label="Siguiente sección">↓</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-1xmdEIt9mo3ptC6VPu5NnmbyOSYrYB3pyoz/8nWdCn/mhVTqTrT2d+Ct2b4I18P7RyqMTwS2sMXgqlH3fAFcAQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-P0GgxyuY0Yh1mY9ADpqdVa04ZpDkOUXbNJd3Z2GkGJ9f5S/9u2gXQZy/7xnm3pG1W9SgWvUdHIYp4HqfWj1qLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="assets/js/main.js" type="module"></script>
 </body>
 </html>
