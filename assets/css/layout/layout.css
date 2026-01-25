@@ -1,0 +1,125 @@
+.container {
+  width: min(100% - 2.5rem, var(--max-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 96px 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(800px circle at 15% 20%, rgba(255, 255, 255, 0.10), transparent 60%),
+    radial-gradient(700px circle at 85% 70%, rgba(255, 255, 255, 0.05), transparent 60%);
+  opacity: 0.8;
+  z-index: 0;
+  animation: sectionGlow 12s ease-in-out infinite alternate;
+}
+
+.section:nth-of-type(2)::before {
+  background: radial-gradient(700px circle at 20% 30%, rgba(255, 255, 255, 0.12), transparent 55%),
+    radial-gradient(900px circle at 80% 20%, rgba(255, 255, 255, 0.06), transparent 60%);
+}
+
+.section:nth-of-type(3)::before {
+  background: radial-gradient(650px circle at 10% 70%, rgba(255, 255, 255, 0.10), transparent 60%),
+    radial-gradient(900px circle at 70% 30%, rgba(255, 255, 255, 0.06), transparent 60%);
+}
+
+.section:nth-of-type(4)::before {
+  background: radial-gradient(800px circle at 85% 40%, rgba(255, 255, 255, 0.10), transparent 60%),
+    radial-gradient(700px circle at 15% 80%, rgba(255, 255, 255, 0.06), transparent 60%);
+}
+
+.section:nth-of-type(5)::before {
+  background: radial-gradient(720px circle at 30% 20%, rgba(255, 255, 255, 0.12), transparent 55%),
+    radial-gradient(900px circle at 80% 70%, rgba(255, 255, 255, 0.05), transparent 60%);
+}
+
+.section:nth-of-type(6)::before {
+  background: radial-gradient(760px circle at 70% 20%, rgba(255, 255, 255, 0.10), transparent 58%),
+    radial-gradient(820px circle at 15% 65%, rgba(255, 255, 255, 0.06), transparent 60%);
+}
+
+.section:nth-of-type(7)::before {
+  background: radial-gradient(740px circle at 20% 70%, rgba(255, 255, 255, 0.12), transparent 58%),
+    radial-gradient(880px circle at 80% 35%, rgba(255, 255, 255, 0.06), transparent 60%);
+}
+
+.section:nth-of-type(8)::before {
+  background: radial-gradient(720px circle at 85% 60%, rgba(255, 255, 255, 0.10), transparent 60%),
+    radial-gradient(900px circle at 25% 25%, rgba(255, 255, 255, 0.06), transparent 60%);
+}
+
+.section:nth-of-type(9)::before {
+  background: radial-gradient(760px circle at 25% 30%, rgba(255, 255, 255, 0.11), transparent 58%),
+    radial-gradient(880px circle at 75% 65%, rgba(255, 255, 255, 0.06), transparent 60%);
+}
+
+.section:nth-of-type(10)::before {
+  background: radial-gradient(740px circle at 70% 30%, rgba(255, 255, 255, 0.10), transparent 58%),
+    radial-gradient(860px circle at 20% 75%, rgba(255, 255, 255, 0.06), transparent 60%);
+}
+
+.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(100% - 3rem, var(--max-width));
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.section:last-of-type::after {
+  display: none;
+}
+
+.section:not(.hero) .container {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  color: var(--white);
+}
+
+.section-header p {
+  color: var(--gray);
+  max-width: 640px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.achievements-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
